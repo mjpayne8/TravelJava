@@ -28,8 +28,18 @@ public class FlightManagerTest {
     }
 
     @Test
+    public void canGetTotalPlaneWeight() {
+        assertEquals(6, manager.getTotalWeight());
+    }
+
+    @Test
+    public void canGetTotalPlaneCapacity(){
+        assertEquals(2, manager.getCapacity());
+    }
+
+    @Test
     public void canFindWeightPerPassenger(){
-        assertEquals(1.5,manager.reservedWeight(),0.01);
+        assertEquals(1.5, manager.reservedWeight(),0.01);
     }
 
     @Test

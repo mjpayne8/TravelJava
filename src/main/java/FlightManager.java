@@ -11,7 +11,7 @@ public class FlightManager {
     }
 
     public double reservedWeight() {
-        return ((double) this.flight.getPlane().getTotalWeight()/this.flight.getPlane().getCapacity())/2;
+        return ((double) this.getTotalWeight()/this.getCapacity())/2;
     }
 
     public double bookedWeight() {
@@ -19,6 +19,14 @@ public class FlightManager {
     }
 
     public double remainingWeight() {
-        return (this.getFlight().getPlane().getTotalWeight()/2) - this.bookedWeight();
+        return (this.getTotalWeight()/2) - this.bookedWeight();
+    }
+
+    public int getTotalWeight() {
+        return this.getFlight().getPlane().getTotalWeight();
+    }
+
+    public int getCapacity() {
+        return this.getFlight().getPlane().getCapacity();
     }
 }
